@@ -22,8 +22,8 @@ interface IValuePokemon {
 }
 
 const App = () => {
-  const [filteredDataSource, setFilteredDataSource] = useState<string[]>([]);
   const [listPokemon, setListPokemon] = useState<string[]>([]);
+  const [filteredDataSource, setFilteredDataSource] = useState<string[]>([]);
   const [textSearch, setTextSearch] = useState<string>('');
 
   useEffect(() => {
@@ -123,7 +123,7 @@ const App = () => {
         {showTitle()}
         {searchBar()}
         <FlatList
-          data={filteredDataSource}
+          data={textSearch ? filteredDataSource : listPokemon}
           renderItem={renderItem}
           numColumns={2}
           keyExtractor={(item, index) => index}
