@@ -22,13 +22,13 @@ interface IValuePokemon {
 }
 
 const App = () => {
+  const [filteredDataSource, setFilteredDataSource] = useState<string[]>([]);
   const [listPokemon, setListPokemon] = useState<string[]>([]);
+  const [textSearch, setTextSearch] = useState<string>('');
 
   useEffect(() => {
     handleGetListPokemon();
   }, []);
-
-  console.log('listPokemon', listPokemon);
 
   const handleGetListPokemon = async () => {
     try {
@@ -81,10 +81,30 @@ const App = () => {
   };
 
   const searchBar = () => {
+    const handleSearch = (text: string) => {
+      if (text) {
+        const newData = listPokemon.filter((value: any) => {
+          const itemData = value?.name
+            ? value.name.toUpperCase()
+            : ''.toUpperCase();
+          const textData = text.toUpperCase();
+          return itemData.indexOf(textData) > -1;
+        });
+
+        setFilteredDataSource(newData);
+        setTextSearch(text);
+      } else {
+        setFilteredDataSource(listPokemon);
+        setTextSearch(text);
+      }
+    };
+
     return (
       <View style={styles.viewSearchBar}>
         <Image source={Images.icon.search} style={styles.iconSearch} />
         <TextInput
+          value={textSearch}
+          onChangeText={handleSearch}
           placeholder={home.placeholderSearch}
           placeholderTextColor={Themes.COLORS.grey}
           style={styles.styleInputSearch}
@@ -103,7 +123,7 @@ const App = () => {
         {showTitle()}
         {searchBar()}
         <FlatList
-          data={listPokemon}
+          data={filteredDataSource}
           renderItem={renderItem}
           numColumns={2}
           keyExtractor={(item, index) => index}
