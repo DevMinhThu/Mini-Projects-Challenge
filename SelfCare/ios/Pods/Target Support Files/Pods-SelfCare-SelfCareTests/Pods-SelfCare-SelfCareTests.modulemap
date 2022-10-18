@@ -1,0 +1,6 @@
+module Pods_SelfCare_SelfCareTests {
+  umbrella header "Pods-SelfCare-SelfCareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
