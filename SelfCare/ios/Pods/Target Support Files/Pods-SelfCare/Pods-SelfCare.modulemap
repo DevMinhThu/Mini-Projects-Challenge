@@ -1,0 +1,6 @@
+module Pods_SelfCare {
+  umbrella header "Pods-SelfCare-umbrella.h"
+
+  export *
+  module * { export * }
+}
