@@ -41,6 +41,7 @@ export default {
             unknown: 'Unknown error.',
             network: 'Network error.',
         },
+        skipTour: 'Skip Tour',
     },
 
     // screens

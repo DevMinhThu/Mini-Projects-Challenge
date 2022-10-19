@@ -19,6 +19,9 @@ const Light = {
         backgroundModalUpdate: '#323232',
         backdropModalUpdate: '#00000071',
         progressUpdateColor: '#28A696',
+        purple: '#432C81',
+        purpleThin: '#82799D',
+        purpleWhite: '#EDECF4',
     },
     FONTS: {
         defaultFont: 'Montserrat-Regular',
