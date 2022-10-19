@@ -22,6 +22,9 @@ const Images = {
     },
     photo: {
         defaultImage: require('./photo/img_default_image.png'),
+        slide1: require('./photo/slide1.png'),
+        slide2: require('./photo/slide2.png'),
+        slide3: require('./photo/slide3.png'),
     },
 };
 
