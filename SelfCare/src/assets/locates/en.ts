@@ -42,6 +42,8 @@ export default {
             network: 'Network error.',
         },
         skipTour: 'Skip Tour',
+        welcome: 'Welcome to',
+        appName: 'Self Care',
     },
 
     // screens
@@ -61,7 +63,7 @@ export default {
             registerText: 'Register now',
         },
         register: {
-            title: 'Register now',
+            title: 'Sign Up',
             emailPlaceholder: 'sample@demo.webcom',
             password: 'Password',
             passwordPlaceholder: 'Password required',
@@ -70,6 +72,11 @@ export default {
             photo: 'Photo',
             camera: 'Camera',
             cancel: 'Cancel',
+            subTitle: 'Hello Beautiful',
+            fullName: 'Full Name',
+            email: 'Email',
+            forgotPassword: 'Forgot Password?',
+            hasAccount: 'Already have an account?',
         },
         sendEmail: {
             title: 'If you forget your password',

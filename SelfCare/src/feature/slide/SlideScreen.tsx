@@ -41,7 +41,7 @@ const SlideScreen = () => {
                     <Text style={styles.text}>{item.text}</Text>
                 </View>
                 <View style={styles.containerBtn}>
-                    <StyledTouchable onPress={() => navigate(AUTHENTICATE_ROUTE.LOGIN)}>
+                    <StyledTouchable onPress={() => navigate(AUTHENTICATE_ROUTE.WELCOME_SCREEN)}>
                         <StyledText i18nText={'common.skipTour'} customStyle={styles.styleBtnOnboarding} />
                     </StyledTouchable>
                 </View>

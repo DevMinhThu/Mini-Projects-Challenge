@@ -4,6 +4,7 @@ import { requireField } from './format';
 import {
     PASSWORD_MAX_LENGTH,
     PASSWORD_MIN_LENGTH,
+    REGEX_CONTAIN_SPECIAL_CHARS,
     REGEX_EMAIL,
     REGEX_PASSWORD,
     REGEX_PHONE,
@@ -24,7 +25,7 @@ const yupValidate = {
     email: () =>
         yup
             .string()
-            .required(() => requireField('email'))
+            .required(() => requireField('Email'))
             .email(i18next.t('error.emailInvalid'))
             .matches(REGEX_EMAIL, i18next.t('error.emailInvalid')),
 
@@ -57,16 +58,18 @@ const yupValidate = {
 
         return yup
             .string()
-            .required(() => requireField('password'))
+            .required(() => requireField('Password'))
             .trim(i18next.t('error.trimSpace'))
             .strict(true)
             .min(PASSWORD_MIN_LENGTH, i18next.t('error.passwordLength'))
             .max(PASSWORD_MAX_LENGTH, i18next.t('error.passwordLength'))
             .matches(REGEX_PASSWORD, i18next.t('error.validatePassword'));
     },
-    birthday: () => yup.string().required(() => requireField('birthday')),
-    labelPicker: () => yup.string().required(() => requireField('labelPicker')),
-    policy: () => yup.string().required(() => requireField('policy')),
+    fullName: () =>
+        yup
+            .string()
+            .required(() => requireField('FullName'))
+            .matches(REGEX_CONTAIN_SPECIAL_CHARS, 'Do not enter special characters'),
 };
 
 export default yupValidate;

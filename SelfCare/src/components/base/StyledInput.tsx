@@ -78,7 +78,8 @@ const StyledInput = (props: StyledInputProps, ref: any) => {
                     wrapInputStyle,
                     !isFocused && !!errorMessage && { borderColor: Themes.COLORS.borderInputError },
                 ]}
-                onPress={onPress}>
+                onPress={onPress}
+            >
                 <TextInput
                     ref={ref || input}
                     onFocus={() => setIsFocused(true)}
@@ -120,7 +121,7 @@ const styles = ScaledSheet.create({
         marginLeft: '5@s',
     },
     container: {
-        width: Metrics.screenWidth * 0.8,
+        // width: Metrics.screenWidth * 0.8,
         marginTop: '15@s',
     },
     label: {},
