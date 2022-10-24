@@ -61,6 +61,9 @@ export default {
             rememberText: 'Keep logged in',
             forgotPasswordText: 'If you forgot your password, click here',
             registerText: 'Register now',
+            subTitle: 'Welcome Back',
+            email: 'Email',
+            requireEmail: 'Please enter your email address',
         },
         register: {
             title: 'Sign Up',
@@ -77,6 +80,7 @@ export default {
             email: 'Email',
             forgotPassword: 'Forgot Password?',
             hasAccount: 'Already have an account?',
+            notAccount: 'Don’t have an account?',
         },
         sendEmail: {
             title: 'If you forget your password',

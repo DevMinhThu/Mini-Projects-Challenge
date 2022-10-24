@@ -25,7 +25,7 @@ const yupValidate = {
     email: () =>
         yup
             .string()
-            .required(() => requireField('Email'))
+            .required(() => 'authen.login.requireEmail')
             .email(i18next.t('error.emailInvalid'))
             .matches(REGEX_EMAIL, i18next.t('error.emailInvalid')),
 
