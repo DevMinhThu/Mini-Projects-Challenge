@@ -65,6 +65,7 @@ const RegisterScreen: FunctionComponent = () => {
                         customStyle={styles.styleInput}
                         placeholderTextColor={Themes.COLORS.purpleThin}
                         onSubmitEditing={() => emailRef.current.focus()}
+                        customErrorStyle={styles.customErrorStyle}
                     />
                     <StyledInputForm
                         name={'email'}
@@ -75,6 +76,7 @@ const RegisterScreen: FunctionComponent = () => {
                         customStyle={styles.styleInput}
                         placeholderTextColor={Themes.COLORS.purpleThin}
                         onSubmitEditing={() => passwordRef.current.focus()}
+                        customErrorStyle={styles.customErrorStyle}
                     />
                     <StyledInputForm
                         name={'password'}
@@ -98,6 +100,7 @@ const RegisterScreen: FunctionComponent = () => {
                                 />
                             </StyledTouchable>
                         )}
+                        customErrorStyle={styles.customErrorStyle}
                     />
                 </FormProvider>
                 <View style={styles.viewForgotPasswordButton}>
@@ -216,6 +219,9 @@ const styles = ScaledSheet.create({
         padding: '10@s',
         marginRight: '13@s',
         tintColor: Themes.COLORS.purpleThin,
+    },
+    customErrorStyle: {
+        marginTop: '5@vs',
     },
 });
 export default RegisterScreen;
