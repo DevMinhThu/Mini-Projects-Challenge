@@ -41,19 +41,19 @@ const MainTabContainer = () => {
             name: TAB_NAVIGATION_ROOT.NOTIFICATION_ROUTE.ROOT,
             title: t('tab.notification'),
             component: NotificationScreen,
-            icon: Images.icons.tab.notification,
+            icon: Images.icons.tab.chart,
+        },
+        {
+            name: TAB_NAVIGATION_ROOT.ACCOUNT_ROUTE.ROOT,
+            title: t('tab.account'),
+            component: AccountScreen,
+            icon: Images.icons.tab.bell,
         },
         {
             name: TAB_NAVIGATION_ROOT.SETTING_ROUTE.ROOT,
             title: t('tab.setting'),
             component: SettingView,
             icon: Images.icons.tab.setting,
-        },
-        {
-            name: TAB_NAVIGATION_ROOT.ACCOUNT_ROUTE.ROOT,
-            title: t('tab.account'),
-            component: AccountScreen,
-            icon: Images.icons.tab.account,
         },
     ];
     return (
