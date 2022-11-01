@@ -45,3 +45,31 @@ export const slides = [
         image: Images.photo.slide3,
     },
 ];
+
+export const dumpData = [
+    {
+        id: '1',
+        title: 'Your Diet Chart',
+        image: Images.photo.stomach,
+    },
+    {
+        id: '2',
+        title: 'Medical History',
+        image: Images.photo.electrocardiogram,
+    },
+    {
+        id: '3',
+        title: 'Lab Results',
+        image: Images.photo.serumBag,
+    },
+    {
+        id: '4',
+        title: 'Online Chat',
+        image: Images.photo.bust,
+    },
+    {
+        id: '5',
+        title: 'Finding yourself',
+        image: Images.photo.stethoscope,
+    },
+];

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Platform, View, Image, StyleSheet } from 'react-native';
+import { Platform, View, Image } from 'react-native';
 import Metrics from 'assets/metrics';
-import { StyledText, StyledTouchable } from 'components/base';
+import { StyledTouchable } from 'components/base';
 import { Themes } from 'assets/themes';
 import Size from 'assets/sizes';
+import { ScaledSheet } from 'react-native-size-matters';
 
 const StyledTabBar = ({ state, descriptors, navigation }: any) => {
     return (
@@ -33,26 +34,19 @@ const StyledTabBar = ({ state, descriptors, navigation }: any) => {
                 return (
                     <StyledTouchable
                         accessibilityRole="button"
-                        // accessibilityStates={isFocused ? ['selected'] : []}
                         accessibilityLabel={options.tabBarAccessibilityLabel}
                         testID={options.tabBarTestID}
                         onPress={onPress}
                         onLongPress={onLongPress}
                         key={route.key}
-                        customStyle={[styles.tabButton]}>
+                        customStyle={[styles.tabButton]}
+                    >
                         <Image
                             source={options?.icon}
                             style={[
                                 styles.tabIcon,
-                                { tintColor: isFocused ? Themes.COLORS.primary : Themes.COLORS.textPrimary },
+                                { tintColor: isFocused ? Themes.COLORS.purple : Themes.COLORS.purpleThin },
                             ]}
-                        />
-                        <StyledText
-                            customStyle={[
-                                styles.tabLabel,
-                                { color: isFocused ? Themes.COLORS.primary : Themes.COLORS.textPrimary },
-                            ]}
-                            i18nText={options?.title || ''}
                         />
                     </StyledTouchable>
                 );
@@ -61,24 +55,23 @@ const StyledTabBar = ({ state, descriptors, navigation }: any) => {
     );
 };
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
     tabContainer: {
         flexDirection: 'row',
         marginBottom: Platform.OS === 'ios' ? Metrics.safeBottomPadding : 0,
         borderTopColor: '#DEE2E6',
         justifyContent: 'space-around',
         borderTopWidth: 1,
-        alignItems: Platform.OS === 'ios' ? 'flex-end' : 'center',
-        height: '8%',
+        alignItems: 'center',
+        height: '56@vs',
     },
     tabButton: {
         alignItems: 'center',
     },
     tabIcon: {
-        width: 17,
-        height: 17,
+        height: '24@vs',
+        aspectRatio: 1,
         resizeMode: 'contain',
-        marginBottom: 5,
     },
     tabLabel: {
         paddingLeft: Size.PADDING.defaultTextPadding,

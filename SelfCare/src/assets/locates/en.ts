@@ -87,7 +87,9 @@ export default {
             sendButtonTitle: 'Next',
         },
     },
-    home: {},
+    home: {
+        nameAccount: '👋🏻 Hi Julia!',
+    },
     account: {},
     notification: {},
     setting: {},
