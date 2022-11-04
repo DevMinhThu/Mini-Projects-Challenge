@@ -1,19 +1,19 @@
 import { BottomTabBarProps, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Images from 'assets/images';
-import AccountScreen from 'feature/account/AccountScreen';
 import HomeDataScreen from 'feature/home/HomeDataScreen';
 import HomeDetailScreen from 'feature/home/HomeDetailScreen';
 // Screen
 import HomeScreen from 'feature/home/HomeScreen';
 import HomeUserListScreen from 'feature/home/HomeUserListScreen';
-import NotificationScreen from 'feature/notification/NotificationScreen';
+import ChartScreen from 'feature/chart/ChartScreen';
 import SettingView from 'feature/setting/SettingScreen';
 import StyledTabBar from 'navigation/components/StyledTabBar';
 import navigationConfigs, { tabScreenOptions } from 'navigation/config/options';
 import { TAB_NAVIGATION_ROOT } from 'navigation/config/routes';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import BellScreen from 'feature/bell/BellScreen';
 
 const MainStack = createStackNavigator();
 const MainTab = createBottomTabNavigator();
@@ -39,14 +39,14 @@ const MainTabContainer = () => {
         },
         {
             name: TAB_NAVIGATION_ROOT.NOTIFICATION_ROUTE.ROOT,
-            title: t('tab.notification'),
-            component: NotificationScreen,
+            title: t('tab.chart'),
+            component: ChartScreen,
             icon: Images.icons.tab.chart,
         },
         {
             name: TAB_NAVIGATION_ROOT.ACCOUNT_ROUTE.ROOT,
-            title: t('tab.account'),
-            component: AccountScreen,
+            title: t('tab.bell'),
+            component: BellScreen,
             icon: Images.icons.tab.bell,
         },
         {

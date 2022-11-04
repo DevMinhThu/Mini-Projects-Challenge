@@ -23,6 +23,8 @@ const Images = {
         },
         eye: require('./icon/ic_eye.png'),
         eyeOff: require('./icon/ic_eye_off.png'),
+        aiming: require('./icon/ic_aiming.png'),
+        gallery: require('./icon/ic_gallery.png'),
     },
     photo: {
         defaultImage: require('./photo/img_default_image.png'),

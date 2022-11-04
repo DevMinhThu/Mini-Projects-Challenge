@@ -49,9 +49,10 @@ export default {
     // screens
     tab: {
         home: 'Home',
-        notification: 'Notification',
+        chart: 'chart',
         setting: 'Setting',
         account: 'Account',
+        bell: 'Bell',
     },
     authen: {
         login: {
@@ -89,6 +90,11 @@ export default {
     },
     home: {
         nameAccount: '👋🏻 Hi Julia!',
+    },
+    qr: {
+        goToSetting: 'Đi tới cài đặt',
+        openPermissionCamera: 'Để mở quyền truy cập Camera',
+        chooseFromLib: 'Chọn từ Thư viện ảnh',
     },
     account: {},
     notification: {},
